@@ -1,0 +1,3 @@
+<?php //route_name_316acfd5c6f7e0a2bb06c1662e15bca2
+
+return [PHP_INT_MAX, 'api_catalogues_get_item'];

@@ -1,0 +1,58 @@
+<?php //App%255CEntity%255CCatalogue
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        clone ($p['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'repositoryClass' => [
+                'App\\Repository\\CatalogueRepository',
+            ],
+            'collectionOperations' => [
+                1 => [
+                    'get' => [
+                        'method' => 'GET',
+                        'access_control' => 'is_granted(\'IS_AUTHENTICATED_FULLY\') === false',
+                    ],
+                    'post' => [
+                        'access_control' => 'is_granted(\'ROLE_ADMIN\')',
+                    ],
+                ],
+            ],
+            'itemOperations' => [
+                1 => [
+                    'get',
+                    'put' => [
+                        'access_control' => 'is_granted(\'ROLE_ADMIN\')',
+                    ],
+                    'delete' => [
+                        'access_control' => 'is_granted(\'ROLE_ADMIN\')',
+                    ],
+                ],
+            ],
+            'attributes' => [
+                1 => [
+                    'access_control' => 'is_granted(\'ROLE_ADMIN\')',
+                    'normalization_context' => [
+                        'groups' => [
+                            'catalogue:read',
+                        ],
+                    ],
+                    'denormalization_context' => [
+                        'groups' => [
+                            'catalogue:write',
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+    ],
+    []
+); }];

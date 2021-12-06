@@ -1,0 +1,51 @@
+<?php //App%255CEntity%255CCommentaire
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        clone ($p['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'repositoryClass' => [
+                'App\\Repository\\CommentaireRepository',
+            ],
+            'collectionOperations' => [
+                1 => [
+                    'get',
+                    'post',
+                ],
+            ],
+            'itemOperations' => [
+                1 => [
+                    'get',
+                    'delete' => [
+                        'access_control' => 'is_granted(\'ROLE_ADMIN\')',
+                    ],
+                ],
+            ],
+            'attributes' => [
+                1 => [
+                    'access_control' => 'is_granted(\'ROLE_ADMIN\')',
+                    'mercure' => true,
+                    'normalization_context' => [
+                        'groups' => [
+                            'commenteire:read',
+                        ],
+                    ],
+                    'denormalization_context' => [
+                        'groups' => [
+                            'commenteire:write',
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+    ],
+    []
+); }];

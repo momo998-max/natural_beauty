@@ -1,0 +1,88 @@
+<?php //App_Entity_Produit
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Serializer\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\ClassMetadata')),
+        clone ($p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata')),
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Produit',
+                'id',
+                'nom',
+                'prix',
+                'etat_new',
+                'statut',
+                'catalogue',
+                'commentaires',
+                'photos',
+                'etatNew',
+            ],
+            'attributesMetadata' => [
+                [
+                    'id' => $o[1],
+                    'nom' => $o[2],
+                    'prix' => $o[3],
+                    'etat_new' => $o[4],
+                    'statut' => $o[5],
+                    'catalogue' => $o[6],
+                    'commentaires' => $o[7],
+                    'photos' => $o[8],
+                    'etatNew' => $o[9],
+                ],
+            ],
+            'groups' => [
+                1 => [
+                    'commenteire:read',
+                    'catalogue:read',
+                    'prduit:read',
+                ],
+                [
+                    'commenteire:read',
+                    'catalogue:read',
+                    'catalogue:write',
+                    'prduit:write',
+                    'prduit:read',
+                ],
+                [
+                    'commenteire:read',
+                    'catalogue:read',
+                    'catalogue:write',
+                    'prduit:write',
+                    'prduit:read',
+                ],
+                [
+                    'prduit:read',
+                ],
+                [
+                    'prduit:read',
+                ],
+                [
+                    'prduit:read',
+                ],
+                [
+                    'prduit:read',
+                ],
+                [
+                    'commenteire:read',
+                    'catalogue:read',
+                    'catalogue:write',
+                    'prduit:write',
+                    'prduit:read',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];
